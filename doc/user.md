@@ -3,6 +3,44 @@ FAQ
 신규구성원이 입사하여 마포사옥 출입권한이 필요한 경우
 인사DB에 구성원이 추가되면 Easy Access를 통해서 출입권한이 익일 자동 발급 됨
 
+# 신규 구성원 입사 (회사로 부터 출입 권한 승인을 받은 경우)
+
+모바일앱 설치 순서는 아래와 같다
+
+## 1. App Store (구글 Play Store, Apple App Store)에서 <b>Initial</b> 검색하여 설치
+## 2. 통신사 PASS 인증을 통한 <b>모바일가입증명</b> 발급 받아 저장
+## 3. 출입권한증명 - 본인회사 선택하여 출입권한 발급 요청
+## 4. 본인 확인을 위한 모바일가입 증명을 제출
+## 5. 출입권한을 확인하여 모바일폰에 저장
+## 4. PS&M 출입권한증명 선택하여 제출하기 클릭 (ADT캡스 출입시스템에 제출)
+## 5. ADT캡스로부터 받은 문자를 클릭하여 “ADT캡스 모바일 출입카드”  App 설치(자동 App Store 연결)
+## 6. ADT캡스로부터 받은 문자를 다시 클릭하여 모바일카드 활성화 및 출입키 다운로드. 카드 꾸미기
+## 7. 모바일카드앱을 실행하고 리더기에 터치하여 출입
+- Realtime ingestion and analytics for large scale data
+- Advantages in random small data access based on DRAM/SSD resident KV Store
+- Optimized for time series data and geospatial data
+
+# 2. Architecture
+
+Spark with Redis/Rocksdb key-value stores
+
+- No I/O bottleneck due to redis in DRAM and RocksDB in SSDs due to the small-sized key/value I/O and DRAM/SSDs’ short latency (~200us)
+- Filter predicates push down to redis and only associated partitions are chosen to be scanned
+
+![flashbase-architecture2](./images/lightningdb_architecture.png)
+
+# 3. Features
+
+
+- Ingestion performance (500,000 records/sec/node)
+- Extreme partitioning (up-to 2 billion partitions for a single node)
+- Real-time query performance by using fine-grained partitions and filter acceleration (vector processing by exploiting XEON SIMD instructions)
+- Column-store / row-store support
+- DRAM - SSD - HDD Tiering
+- High  compression  ratio  and  compression  speed  (Gzip  level  compression ratio w/ LZ4 level speed)
+- Low Write Amplification for SSD lifetime
+
+
 
 * 신규구성원이 입사하였을 경우 모바일출입카드 설치하는 순서는? (Easy Access에서 발급 신청이 완료 된 경우)
 App Store (구글 Play Store, Apple App Store)에서 initial 검색하여 설치
