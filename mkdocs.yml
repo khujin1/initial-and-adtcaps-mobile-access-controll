@@ -1,0 +1,31 @@
+site_name: Intial & ADT캡스 모바일 출입통제
+site_author: SKT 주재현
+site_description: 모바일 전자증명 기반 출입통제
+site_url: https://initial-and-adt.readthedocs.io/ko/latest/
+copyright: 
+google_analytics: ['UA-163860122-1', 'https://initial-and-adt.readthedocs.io/ko/latest/']
+
+repo_name: source repository
+repo_url: https://github.com/khujin1/initial-and-adtcaps-mobile-access-controll
+
+nav:
+  - Introduction:
+    - Overview: index.md
+
+
+plugins:
+  - search
+markdown_extensions:
+  - meta
+  - toc:
+      permalink: true
+      baselevel: 1
+  - admonition
+  - footnotes
+
+theme:
+  name: readthedocs
+  highlightjs: true
+
+extra:
+  version: 0.1
