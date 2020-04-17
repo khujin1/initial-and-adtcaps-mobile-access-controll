@@ -3,29 +3,44 @@ FAQ
 신규구성원이 입사하여 마포사옥 출입권한이 필요한 경우
 인사DB에 구성원이 추가되면 Easy Access를 통해서 출입권한이 익일 자동 발급 됨
 
-### 신규 구성원 입사 (회사로 부터 출입 권한 승인을 받은 경우)
+## 1. 신규 입사 및 최초 설치
 
-모바일앱 설치 순서는 아래와 같다
+회사로 부터 출입 권한 승인을 받은 경우 모바일앱 설치 순서는 아래와 같다
 
-#### 1. App Store (구글 Play Store, Apple App Store)에서 <b>Initial</b> 검색하여 설치
-##### 2. 통신사 PASS 인증을 통한 <b>모바일가입증명</b> 발급 받아 저장
-###### 3. 출입권한증명 - 본인회사 선택하여 출입권한 발급 요청
-## 4. 본인 확인을 위한 모바일가입 증명을 제출
-## 5. 출입권한을 확인하여 모바일폰에 저장
-## 4. PS&M 출입권한증명 선택하여 제출하기 클릭 (ADT캡스 출입시스템에 제출)
-## 5. ADT캡스로부터 받은 문자를 클릭하여 “ADT캡스 모바일 출입카드”  App 설치(자동 App Store 연결)
-## 6. ADT캡스로부터 받은 문자를 다시 클릭하여 모바일카드 활성화 및 출입키 다운로드. 카드 꾸미기
-## 7. 모바일카드앱을 실행하고 리더기에 터치하여 출입
-- Realtime ingestion and analytics for large scale data
-- Advantages in random small data access based on DRAM/SSD resident KV Store
-- Optimized for time series data and geospatial data
+     1. App Store (구글 Play Store, Apple App Store)에서 "Initial" by SKTelecom 검색하여 설치
+     2. 통신사 PASS 인증을 통한 "모바일가입증명" 발급 받고 저장
+     3. 출입권한증명 - 본인회사 선택하여 "출입권한증명" 발급 요청
+     4. "연결하기" 클릭하고 약관동의 후 본인 확인을 위한 "모바일가입증명" 필수 항목 선택 제출
+     5. "출입권한증명" 내용 확인하여 모바일폰에 저장
+     6. 저장된 "출입권한증명" 선택하여 "제출하기" 클릭 (ADT캡스 출입시스템에 제출)
+     7. ADT캡스 "연결하기" 클릭하고 약관동의 후 출입권한 확인을 위한 "출입권한증명" 필수 항목 선택 제출
+     8. ADT캡스 문자 수신 확인
+         - ADT캡스 문자는 최초 1회만 발송 됨. 수신이 안되면 스팸 차단 여부 확인
+         - 이미 ADT캡스와 연결한 이력이 있으면 발송 안됨
+         - 스팸차단 해제한 경우 6번부터 다시 시작
+     9. ADT캡스로부터 받은 문자를 클릭하여 “ADT캡스 모바일 출입카드” App 설치(자동 App Store 연결)
+     10. ADT캡스로부터 받은 문자를 다시 클릭하여 "모바일 출입카드" 활성화 
+     11. 출입키 다운로드 버튼을 클릭하여 마무리
+     12. 환경설정 - 카드꾸미기에서 각 회사 사원증 이미지 선택
+     13. 모바일카드앱을 실행하고 출입구 리더기에 터치하여 출입
 
-# 2. Architecture
 
-Spark with Redis/Rocksdb key-value stores
+## 2. 재설치
 
-- No I/O bottleneck due to redis in DRAM and RocksDB in SSDs due to the small-sized key/value I/O and DRAM/SSDs’ short latency (~200us)
-- Filter predicates push down to redis and only associated partitions are chosen to be scanned
+신규구성원이 핸드폰을 변경하였거나, 앱을 재설치 한 경우 순서는 아래와 같다.
+
+     1. App Store (구글 Play Store, Apple App Store)에서 "Initial" by SKTelecom 검색하여 설치
+     2. 통신사 PASS 인증을 통한 "모바일가입증명" 발급 받고 저장
+     3. 출입권한증명 - 본인회사 선택하여 "출입권한증명" 발급 요청
+     4. "연결하기" 클릭하고 약관동의 후 본인 확인을 위한 "모바일가입증명" 필수 항목 선택 제출
+     5. "출입권한증명" 내용 확인하여 모바일폰에 저장
+     6. App Store (구글 Play Store, Apple App Store)에서 "ADT캡스 모바일 출입카드" 검색하여 설치
+         - 이미 ADT캡스와 연결한 이력이 있으면 문자 발송 안됨
+     7. "인증확인" 버튼을 클릭하여 증명서 검증
+     8. 환경설정 - 카드꾸미기에서 각 회사 사원증 이미지 선택
+     9. 모바일카드앱을 실행하고 출입구 리더기에 터치하여 출입
+
+
 
 ![flashbase-architecture2](./images/lightningdb_architecture.png)
 
@@ -42,23 +57,10 @@ Spark with Redis/Rocksdb key-value stores
 
 
 
-* 신규구성원이 입사하였을 경우 모바일출입카드 설치하는 순서는? (Easy Access에서 발급 신청이 완료 된 경우)
-App Store (구글 Play Store, Apple App Store)에서 initial 검색하여 설치
-모바일가입증명 발급 받기
-출입권한증명-PS&M 권한 요청하여 발급 받기
-PS&M 출입권한증명 선택하여 제출하기 클릭 (ADT캡스 출입시스템에 제출)
-ADT캡스로부터 받은 문자를 클릭하여 “ADT캡스 모바일 출입카드”  App 설치(자동 App Store 연결)
-ADT캡스로부터 받은 문자를 다시 클릭하여 모바일카드 활성화 및 출입키 다운로드. 카드 꾸미기
-모바일카드앱을 실행하고 리더기에 터치하여 출입
 
 
 
-신규구성원이 핸드폰을 변경하였거나, 앱을 재설치 한 경우.
-App Store (구글 Play Store, Apple App Store)에서 initial 검색하여 설치
-모바일가입증명 발급 받기
-출입권한증명-PS&M 권한 요청하여 발급 받기
-App Store (구글 Play Store, Apple App Store)에서 “ADT캡스 모바일 출입카드” 검색하여  설치. 카드 꾸미기
-모바일카드앱을 실행하고 리더기에 터치하여 출입
+
 
 
 한번 받은 출입권한 증명서 변경은? (주의! Admin이 출입권한증명서를 변경하면 기존 권한이 폐기 되면서 출입이 불가능해짐)
