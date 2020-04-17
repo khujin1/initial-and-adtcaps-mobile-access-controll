@@ -7,7 +7,7 @@ FAQ
 
 회사로 부터 출입 권한 승인을 받은 경우 모바일앱 설치 순서는 아래와 같다
 
-     1. App Store (구글 Play Store, Apple App Store)에서 "Initial" by SKTelecom 검색하여 설치
+     1. App Store (구글 Play Store, 애플 App Store)에서 "Initial" by SKTelecom 검색하여 설치
      2. 통신사 PASS 인증을 통한 "모바일가입증명" 발급 받고 저장
      3. 출입권한증명 - 본인회사 선택하여 "출입권한증명" 발급 요청
      4. "연결하기" 클릭하고 약관동의 후 본인 확인을 위한 "모바일가입증명" 필수 항목 선택 제출
@@ -29,7 +29,7 @@ FAQ
 
 신규구성원이 핸드폰을 변경하였거나, 앱을 재설치 한 경우 순서는 아래와 같다.
 
-     1. App Store (구글 Play Store, Apple App Store)에서 "Initial" by SKTelecom 검색하여 설치
+     1. App Store (구글 Play Store, 애플 App Store)에서 "Initial" by SKTelecom 검색하여 설치
      2. 통신사 PASS 인증을 통한 "모바일가입증명" 발급 받고 저장
      3. 출입권한증명 - 본인회사 선택하여 "출입권한증명" 발급 요청
      4. "연결하기" 클릭하고 약관동의 후 본인 확인을 위한 "모바일가입증명" 필수 항목 선택 제출
