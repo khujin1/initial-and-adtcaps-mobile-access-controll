@@ -9,9 +9,11 @@ repo_name: source repository
 repo_url: https://github.com/khujin1/initial-and-adtcaps-mobile-access-controll
 
 nav:
-  - Introduction:
+  - 사용자 :
     - FAQ: index.md
-
+  - 운영자 :
+    - FAQ: index.md
+  
 
 plugins:
   - search
